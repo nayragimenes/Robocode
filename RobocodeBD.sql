@@ -1,6 +1,6 @@
 CREATE TABLE cidades(
 	i_cidade 	INTEGER NOT NULL,
-	nome 		VARCHAR(70)	NOT NULL,
+	nome 		VARCHAR(70) NOT NULL,
 	CONSTRAINT pk_cidades PRIMARY KEY(i_cidade)
 );
 
@@ -70,7 +70,7 @@ CREATE TABLE adocoes(
 	i_pet     	INTEGER NOT NULL,
 	descricao 	VARCHAR(200) NOT NULL,
 	data 	  	DATE NOT NULL,
-	valor 	  	NUMERIC(12,2)	NOT NULL,
+	valor 	  	NUMERIC(12,2) NOT NULL,
 	CONSTRAINT pk_adocoes		PRIMARY KEY(i_adocao),
 	CONSTRAINT fk_adocoes_pessoas 	FOREIGN KEY(i_pessoa)	REFERENCES pessoas(i_pessoa),
 	CONSTRAINT fk_adocoes_pets	FOREIGN KEY(i_pet) 	REFERENCES pets(i_pet)
