@@ -60,7 +60,7 @@ CREATE TABLE pessoas(
 	CONSTRAINT pk_pessoas 			  PRIMARY KEY(i_pessoa),
 	CONSTRAINT fk_pessoas_cidades 	  FOREIGN KEY(i_cidade) 	REFERENCES cidades(i_cidade),
 	CONSTRAINT fk_pessoas_logradouros FOREIGN KEY(i_logradouro)	REFERENCES logradouros(i_logradouro),
-	CONSTRAINT fk_pessoas_bairros 	  FOREIGN KEY(i_bairro) 		REFERENCES bairros(i_bairro)
+	CONSTRAINT fk_pessoas_bairros 	  FOREIGN KEY(i_bairro) 	REFERENCES bairros(i_bairro)
 );
 
 
@@ -75,6 +75,13 @@ CREATE TABLE adocoes(
 	CONSTRAINT fk_adocoes_pessoas 	FOREIGN KEY(i_pessoa)	REFERENCES pessoas(i_pessoa),
 	CONSTRAINT fk_adocoes_pets 		FOREIGN KEY(i_pet) 		REFERENCES pets(i_pet)
 );
+
+INSERT INTO cidades VALUES (1, 'Criciúma');
+INSERT INTO cidades VALUES (2, 'Nova Veneza');
+INSERT INTO cidades VALUES (3, 'Forquilhinha'); 
+INSERT INTO cidades VALUES (4, 'Turvo'); 
+INSERT INTO cidades VALUES (5, 'Içara'); 
+
 	
 
 
